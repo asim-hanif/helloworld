@@ -1,0 +1,55 @@
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("--------------Sample Calculator-------------------")
+	
+	fmt.Println("Enter first number : ")
+	var num1 int
+    fmt.Scan(&num1)
+	
+	fmt.Println("Enter second number : ")
+	var num2 int
+    fmt.Scan(&num2)
+	
+	fmt.Println("Press 1 for addition \n Press 2 for subtraction \n press 3 for multiplication \n press 4 for division \n ")
+	
+	var Result int
+	
+	option := 0
+	switch option {
+	case 1:
+		Result = add(num1, num2)
+		fmt.Println(Result)
+		break
+	case 2:
+		Result = sub(num1, num2)
+		fmt.Println(Result)
+		break
+	case 3:
+		Result = multiply(num1, num2)
+		fmt.Println(Result)
+		break
+	case 4:
+		Result = divide(num1, num2)
+		fmt.Println(Result)
+		break
+	}
+}
+func add(a int, b int) int {
+	return a + b
+}
+func sub(a int, b int) int {
+	return a - b
+}
+func multiply(a int, b int) int {
+	return a * b
+}
+func divide(a int, b int) int {
+	if b == 0 {
+		return 0
+	} else {
+		return a / b
+	}
+}
